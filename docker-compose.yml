@@ -1,0 +1,98 @@
+# docker-compose version:
+version: '3.8'
+
+# Service list:
+services:
+
+  # Database service: 
+  vacation-time-database:
+
+    # Image name to create from Dockerfile: 
+    image: ogadassi/vacation-time-database-image:1.0
+
+    # Where is the location of the Dockerfile:
+    build: ./Database
+
+    # Container name: 
+    container_name: vacation-time-database-container
+
+    # On crash - what to do - restart unless manually stopped:
+    restart: unless-stopped
+
+    # Volumes
+    volumes:
+      - vacation-time-db:/var/lib/mysql
+
+    # Environment variables needed by mysql installation 
+    environment:
+      MYSQL_HOST: localhost
+      MYSQL_USER: TheMaryEllenCarter
+      MYSQL_PASSWORD: 0809071020Og
+      MYSQL_ROOT_PASSWORD: 0809071020Og
+      MYSQL_DATABASE: vacationtime
+    #--------------------------------------------------------------------------------------
+
+    # Database service: 
+  vacation-time-backend:
+
+    # on which service were depending on
+    depends_on:
+      - vacation-time-database
+
+    # Image name to create from Dockerfile: 
+    image: ogadassi/vacation-time-backend-image:1.0
+
+    # Where is the location of the Dockerfile:
+    build: ./Backend
+
+    # Container name: 
+    container_name: vacation-time-backend-container
+
+    # Port binding:
+    ports:
+      - 4809:4809
+
+    # On crash - what to do - restart unless manually stopped:
+    restart: unless-stopped
+
+    # Volumes
+    volumes:
+      - vacation-time-backend-images:/app/src/1-assets/images
+      - vacation-time-backend-error-log:/app/errors
+
+    # Environment variables needed by backend container
+    environment:
+      MYSQL_HOST: vacation-time-database
+      MYSQL_USER: TheMaryEllenCarter
+      MYSQL_PASSWORD: 0809071020Og
+      MYSQL_DATABASE: vacationtime
+    #--------------------------------------------------------------------------------------
+
+    # Database service: 
+  vacation-time-frontend:
+
+    # on which service were depending on
+    depends_on:
+      - vacation-time-backend
+
+    # Image name to create from Dockerfile: 
+    image: ogadassi/vacation-time-frontend-image:1.0
+
+    # Where is the location of the Dockerfile:
+    build: ./Frontend
+
+    # Container name: 
+    container_name: vacation-time-frontend-container
+
+    # Port binding:
+    ports:
+      - 3000:3000
+
+    # On crash - what to do - restart unless manually stopped:
+    restart: unless-stopped
+
+#--------------------------------------------------------------------------------------
+volumes:
+  vacation-time-db:
+  vacation-time-backend-images:
+  vacation-time-backend-error-log:

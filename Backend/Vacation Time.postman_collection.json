@@ -1,0 +1,738 @@
+{
+	"info": {
+		"_postman_id": "341e99a8-2fd7-4cef-aae9-b7525e9d84f8",
+		"name": "Vacation Time",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32658511"
+	},
+	"item": [
+		{
+			"name": "Vacations",
+			"item": [
+				{
+					"name": "Get Vacations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4809/api/all-vacations/:userId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4809",
+							"path": [
+								"api",
+								"all-vacations",
+								":userId"
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a Vacation",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4809/api/vacation/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4809",
+							"path": [
+								"api",
+								"vacation",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "15"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a Vacation Image",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4809/api/vacations/images/:imageName",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4809",
+							"path": [
+								"api",
+								"vacations",
+								"images",
+								":imageName"
+							],
+							"variable": [
+								{
+									"key": "imageName",
+									"value": "113ad467-de42-4411-a3e0-4ce97562b6d9.webp"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add a Vacation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "destination",
+									"value": "dest",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "heres a description with maaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaany words",
+									"type": "text"
+								},
+								{
+									"key": "startDate",
+									"value": "2020-08-09",
+									"type": "text"
+								},
+								{
+									"key": "endDate",
+									"value": "2021-08-09",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "1234",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/ohadx/Pictures/Picture3.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4809/api/vacation",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4809",
+							"path": [
+								"api",
+								"vacation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a Vacation",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "destination",
+									"value": "gh, Japan",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Step back in time and experience the serenity of ancient temples and serene gardens in Kyoto, Japan. Wander through the Arashiyama Bamboo Grove, a mystical path lined with towering bamboo stalks. Explore the iconic Kinkaku-ji temple, the Golden Pavilion, and marvel at its shimmering beauty. Immerse yourself in the peaceful Zen gardens of Ryoan-ji temple and contemplate the raked sand and meticulously placed rocks. Discover the bustling Nishiki Market for a taste of local delicacies and explore the vibrant Gion district, the heart of geisha culture. Immerse yourself in the rich history and tranquil atmosphere of Kyoto.",
+									"type": "text"
+								},
+								{
+									"key": "startDate",
+									"value": "2020-08-09",
+									"type": "text"
+								},
+								{
+									"key": "endDate",
+									"value": "2021-08-09",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "1234",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/ohadx/Pictures/Picture1.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4809/api/vacation/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4809",
+							"path": [
+								"api",
+								"vacation",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "16"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a Vacation",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "destination",
+									"value": "dest",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "heres a description with maaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaany words",
+									"type": "text"
+								},
+								{
+									"key": "startDate",
+									"value": "2020-08-09",
+									"type": "text"
+								},
+								{
+									"key": "endDate",
+									"value": "2021-08-09",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "1234",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/ohadx/Downloads/e7cc7a142eec3f514c6829d0e8dbdee75e581dc88c24b1717e582bba90887c6b_report.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4809/api/vacation/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4809",
+							"path": [
+								"api",
+								"vacation",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "16"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "register",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var template = `",
+									"<style type=\"text/css\">",
+									"    .tftable {font-size:14px;color:#333333;width:100%;border-width: 1px;border-color: #87ceeb;border-collapse: collapse;}",
+									"    .tftable th {font-size:18px;background-color:#87ceeb;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;text-align:left;}",
+									"    .tftable tr {background-color:#ffffff;}",
+									"    .tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;}",
+									"    .tftable tr:hover {background-color:#e0ffff;}",
+									"</style>",
+									"",
+									"<table class=\"tftable\" border=\"1\">",
+									"    <tr>",
+									"        <th>ID</th>",
+									"        <th>Name</th>",
+									"        <th>Price</th>",
+									"        <th>Stock</th>",
+									"        <th>Category ID</th>",
+									"        <th>Supplier ID</th>",
+									"        <th>Quantity</th>",
+									"        <th>Image Name</th>",
+									"    </tr>",
+									"    <tr>",
+									"        <td>{{id}}</td>",
+									"        <td>{{name}}</td>",
+									"        <td>{{price}}</td>",
+									"        <td>{{stock}}</td>",
+									"        <td>{{categoryId}}</td>",
+									"        <td>{{supplierId}}</td>",
+									"        <td>{{quantity}}</td>",
+									"        <td>{{imageName}}</td>",
+									"    </tr>",
+									"</table>",
+									"`;",
+									"",
+									"function constructVisualizerPayload() {",
+									"    return { response: pm.response.json() }",
+									"}",
+									"",
+									"pm.visualizer.set(template, constructVisualizerPayload());"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "1",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"admin \",\r\n    \"lastName\": \"main\",\r\n    \"email\": \"admin@gmail.com\",\r\n    \"password\": \"administrator\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4809/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4809",
+							"path": [
+								"api",
+								"register"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var template = `",
+									"<style type=\"text/css\">",
+									"    .tftable {font-size:14px;color:#333333;width:100%;border-width: 1px;border-color: #87ceeb;border-collapse: collapse;}",
+									"    .tftable th {font-size:18px;background-color:#87ceeb;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;text-align:left;}",
+									"    .tftable tr {background-color:#ffffff;}",
+									"    .tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;}",
+									"    .tftable tr:hover {background-color:#e0ffff;}",
+									"</style>",
+									"",
+									"<table class=\"tftable\" border=\"1\">",
+									"    <tr>",
+									"        <th>ID</th>",
+									"        <th>Name</th>",
+									"        <th>Price</th>",
+									"        <th>Stock</th>",
+									"        <th>Category ID</th>",
+									"        <th>Supplier ID</th>",
+									"        <th>Quantity</th>",
+									"        <th>Image Name</th>",
+									"    </tr>",
+									"    <tr>",
+									"        <td>{{id}}</td>",
+									"        <td>{{name}}</td>",
+									"        <td>{{price}}</td>",
+									"        <td>{{stock}}</td>",
+									"        <td>{{categoryId}}</td>",
+									"        <td>{{supplierId}}</td>",
+									"        <td>{{quantity}}</td>",
+									"        <td>{{imageName}}</td>",
+									"    </tr>",
+									"</table>",
+									"`;",
+									"",
+									"function constructVisualizerPayload() {",
+									"    return { response: pm.response.json() }",
+									"}",
+									"",
+									"pm.visualizer.set(template, constructVisualizerPayload());"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"admin@gmail.com\",\r\n    \"password\": \"administrator\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4809/api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4809",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Likes",
+			"item": [
+				{
+					"name": "Add Like",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var template = `",
+									"<style type=\"text/css\">",
+									"    .tftable {font-size:14px;color:#333333;width:100%;border-width: 1px;border-color: #87ceeb;border-collapse: collapse;}",
+									"    .tftable th {font-size:18px;background-color:#87ceeb;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;text-align:left;}",
+									"    .tftable tr {background-color:#ffffff;}",
+									"    .tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;}",
+									"    .tftable tr:hover {background-color:#e0ffff;}",
+									"</style>",
+									"",
+									"<table class=\"tftable\" border=\"1\">",
+									"    <tr>",
+									"        <th>ID</th>",
+									"        <th>Name</th>",
+									"        <th>Price</th>",
+									"        <th>Stock</th>",
+									"        <th>Category ID</th>",
+									"        <th>Supplier ID</th>",
+									"        <th>Quantity</th>",
+									"        <th>Image Name</th>",
+									"    </tr>",
+									"    <tr>",
+									"        <td>{{id}}</td>",
+									"        <td>{{name}}</td>",
+									"        <td>{{price}}</td>",
+									"        <td>{{stock}}</td>",
+									"        <td>{{categoryId}}</td>",
+									"        <td>{{supplierId}}</td>",
+									"        <td>{{quantity}}</td>",
+									"        <td>{{imageName}}</td>",
+									"    </tr>",
+									"</table>",
+									"`;",
+									"",
+									"function constructVisualizerPayload() {",
+									"    return { response: pm.response.json() }",
+									"}",
+									"",
+									"pm.visualizer.set(template, constructVisualizerPayload());"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "1",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4809/api/like/user/:userId/vacation/:vacationId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4809",
+							"path": [
+								"api",
+								"like",
+								"user",
+								":userId",
+								"vacation",
+								":vacationId"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "1",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "15"
+								},
+								{
+									"key": "vacationId",
+									"value": "43"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Like",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var template = `",
+									"<style type=\"text/css\">",
+									"    .tftable {font-size:14px;color:#333333;width:100%;border-width: 1px;border-color: #87ceeb;border-collapse: collapse;}",
+									"    .tftable th {font-size:18px;background-color:#87ceeb;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;text-align:left;}",
+									"    .tftable tr {background-color:#ffffff;}",
+									"    .tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;}",
+									"    .tftable tr:hover {background-color:#e0ffff;}",
+									"</style>",
+									"",
+									"<table class=\"tftable\" border=\"1\">",
+									"    <tr>",
+									"        <th>ID</th>",
+									"        <th>Name</th>",
+									"        <th>Price</th>",
+									"        <th>Stock</th>",
+									"        <th>Category ID</th>",
+									"        <th>Supplier ID</th>",
+									"        <th>Quantity</th>",
+									"        <th>Image Name</th>",
+									"    </tr>",
+									"    <tr>",
+									"        <td>{{id}}</td>",
+									"        <td>{{name}}</td>",
+									"        <td>{{price}}</td>",
+									"        <td>{{stock}}</td>",
+									"        <td>{{categoryId}}</td>",
+									"        <td>{{supplierId}}</td>",
+									"        <td>{{quantity}}</td>",
+									"        <td>{{imageName}}</td>",
+									"    </tr>",
+									"</table>",
+									"`;",
+									"",
+									"function constructVisualizerPayload() {",
+									"    return { response: pm.response.json() }",
+									"}",
+									"",
+									"pm.visualizer.set(template, constructVisualizerPayload());"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "",
+								"value": "1",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4809/api/like/user/:userId/vacation/:vacationId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4809",
+							"path": [
+								"api",
+								"like",
+								"user",
+								":userId",
+								"vacation",
+								":vacationId"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "1",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "10"
+								},
+								{
+									"key": "vacationId",
+									"value": "15"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjo1LCJmaXJzdE5hbWUiOiJhZG1pbiAiLCJsYXN0TmFtZSI6Im1haW4iLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInJvbGVJZCI6MX0sImlhdCI6MTcxMTc5MzU0MSwiZXhwIjoxNzExODExNTQxfQ.yNIb_pXgeosPBwyyMqDN_rgDyh9WreQmtkdJJWkWCv8",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

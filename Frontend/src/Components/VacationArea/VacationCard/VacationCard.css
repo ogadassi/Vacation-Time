@@ -1,0 +1,280 @@
+@media screen and (max-width: 699px) {
+  .card-container {
+    display: grid;
+    grid-template-columns: auto;
+    margin: auto;
+  }
+}
+@media screen and (min-width: 700px) {
+  .card-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: auto;
+    padding: 0 10px;
+  }
+}
+@media screen and (min-width: 1035px) {
+  .card-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin: auto;
+    gap: 0 10px;
+    padding: 0 10px;
+  }
+}
+@media screen and (min-width: 1204px) {
+  .card-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 70%;
+    margin: auto;
+    gap: 10px;
+  }
+}
+
+.card-container > h1 {
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  transform: translate(-50%);
+}
+.VacationCard {
+  display: grid;
+  grid-template-rows: 0% 35% 9% 6% 7% 43%;
+  border: 2px solid;
+  height: 500px;
+  width: 330px;
+  margin: 20px auto;
+  border-radius: 20px;
+  background: rgba(203, 255, 224, 0.364);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3px);
+  border: 1px solid rgba(164, 255, 222, 0.62);
+  border-radius: 20px;
+  transform: translateZ(0);
+  transition: all 0.2s;
+}
+
+.VacationCard:hover:not(.VacationCard *) {
+  transform: scale(1.05);
+  transform-origin: 160px 0;
+  backdrop-filter: blur(9px);
+}
+
+.VacationCard:hover > .card-text {
+  font-size: medium;
+  line-height: 1.6;
+  transition: all 0.2s;
+  text-align: left;
+}
+
+.VacationCard *:not(img, .heart-container, .likeCount) {
+  margin: 10px;
+}
+
+.card-img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  height: 187px;
+}
+
+.card-text {
+  overflow: scroll;
+  font-size: large;
+  margin: 0px 40px;
+}
+
+.adminBtns {
+  z-index: 1;
+}
+.likeCount {
+  width: max-content;
+  position: absolute;
+  top: 13px;
+  left: 55px;
+  background-color: rgba(255, 166, 178, 0.385);
+  padding: 2px 9px;
+  border-radius: 20px;
+}
+
+.heart-container {
+  --heart-color: rgb(255, 166, 178);
+  position: relative;
+  width: 60px;
+  height: 60px;
+  transition: 0.3s;
+  margin: 0px;
+}
+
+.heart-container .checkbox {
+  position: absolute;
+  left: -2px;
+  width: 60%;
+  height: 60%;
+  opacity: 0;
+  z-index: 20;
+  cursor: pointer;
+}
+
+.heart-container .svg-container {
+  width: 90%;
+  height: 90%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: drop-shadow(2px 2px 4px rgb(0 0 0 / 0.4));
+}
+
+.heart-container .svg-outline,
+.heart-container .svg-filled {
+  fill: var(--heart-color);
+  position: absolute;
+}
+
+.heart-container .svg-filled {
+  animation: keyframes-svg-filled 1s;
+  display: none;
+}
+
+.heart-container .svg-celebrate {
+  position: absolute;
+  animation: keyframes-svg-celebrate 0.5s;
+  animation-fill-mode: forwards;
+  display: none;
+  stroke: var(--heart-color);
+  fill: var(--heart-color);
+  stroke-width: 2px;
+}
+
+.heart-container .checkbox:checked ~ .svg-container .svg-filled {
+  display: block;
+}
+
+.heart-container .checkbox:checked ~ .svg-container .svg-celebrate {
+  display: block;
+}
+
+@keyframes keyframes-svg-filled {
+  0% {
+    transform: scale(0);
+  }
+
+  25% {
+    transform: scale(1.2);
+  }
+
+  50% {
+    transform: scale(1);
+    filter: brightness(1.5);
+  }
+}
+
+@keyframes keyframes-svg-celebrate {
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    opacity: 1;
+    filter: brightness(1.5);
+  }
+
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+    display: none;
+  }
+}
+.del {
+  position: absolute;
+  top: 0;
+  right: 30px;
+  width: 120px;
+  height: 40px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.del div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  box-shadow: 4px 4px 6px 0 rgba(174, 126, 126, 0.33),
+    2px 2px 6px 0 rgba(116, 125, 136, 0.5),
+    inset -2px -2px 6px 0 rgba(255, 255, 255, 0.2),
+    inset 2px 2px 6px 0 rgba(0, 0, 0, 0.4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  letter-spacing: 1px;
+  color: #603636;
+  font-weight: bold;
+  z-index: 1;
+  transition: 0.6s;
+  background: #ffc2c2;
+}
+
+.del:hover div {
+  letter-spacing: 4px;
+  color: #fff4f4;
+  background: #ff9191;
+}
+.edit {
+  position: absolute;
+  top: 0;
+  left: 30px;
+  width: 120px;
+  height: 40px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.edit .navLink {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  box-shadow: 4px 4px 6px 0 rgba(126, 174, 151, 0.33),
+    2px 2px 6px 0 rgba(116, 125, 136, 0.5),
+    inset -2px -2px 6px 0 rgba(255, 255, 255, 0.2),
+    inset 2px 2px 6px 0 rgba(0, 0, 0, 0.4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  letter-spacing: 1px;
+  color: #36603c;
+  font-weight: bold;
+  z-index: 1;
+  transition: 0.6s;
+  background: #c2ffdb;
+}
+
+.edit:hover .navLink {
+  letter-spacing: 4px;
+  color: #f4fff8;
+  background: #58b07b;
+}
+.navLink {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 120px;
+  height: 50px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}

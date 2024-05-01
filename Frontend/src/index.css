@@ -1,0 +1,37 @@
+html,
+body,
+#root {
+  overflow: hidden;
+  margin: 0;
+  height: 100%;
+  text-align: center;
+  background-color: rgb(212, 222, 218);
+  background-image: url("../src/Assets/Images/Untitled\ \(4\).png");
+  background-repeat: repeat;
+  background-size: contain;
+  font-family: roboto;
+  user-select: none;
+}
+
+a {
+  color: rgb(80, 120, 96);
+  text-decoration: none;
+}
+
+form {
+  position: relative;
+}
+
+.error {
+  color: red;
+  position: absolute;
+  margin-left: 20px;
+  width: 100%;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+body .navlink {
+  color: black;
+  text-decoration: none;
+}

@@ -1,0 +1,101 @@
+.Register {
+  position: absolute;
+  background-image: url("../../../Assets/Images/vacation-wallpaper-3840x2160.jpg");
+  height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.logoContainer {
+  position: absolute;
+  top: 5%;
+  width: 40%;
+  height: 90%;
+  background: rgba(203, 255, 224, 0.364);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3px);
+  border: 1px solid rgba(164, 255, 222, 0.62);
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-left: none;
+}
+
+.Register img {
+  position: relative;
+  top: -10px;
+  width: 500px;
+}
+
+.Register form {
+  position: absolute;
+  top: 15%;
+  left: 57%;
+  width: 400px;
+  height: 76%;
+  padding: 0px;
+  background: rgba(203, 255, 224, 0.364);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3px);
+  border: 1px solid rgba(164, 255, 222, 0.62);
+  border-radius: 20px;
+}
+
+.Register form > input,
+.Register form > button,
+.Register form > .text-box,
+.Register form > textarea {
+  width: 300px;
+  box-sizing: border-box;
+  margin: 20px 0px;
+  border-radius: 7px;
+  font-size: large;
+}
+.mobile-logo-img {
+  display: none;
+}
+
+@media screen and (max-width: 1273px) {
+  .Register img {
+    position: relative;
+    top: -10px;
+    width: 30vw;
+  }
+}
+@media screen and (max-width: 950px) {
+  .Register {
+    display: flex;
+  }
+  .Register form {
+    top: 22%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 400px;
+    height: 73%;
+  }
+  .Register .logoContainer {
+    top: 1%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 400px;
+    height: 20%;
+    background: rgba(203, 255, 224, 0.364);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3px);
+    border: 1px solid rgba(164, 255, 222, 0.62);
+    border-radius: 20px;
+  }
+  .Register .logo-img {
+    display: none;
+  }
+  .Register .mobile-logo-img {
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+  }
+
+  .Register img {
+    position: relative;
+    top: -10px;
+    width: 300px;
+  }
+}

@@ -1,0 +1,7 @@
+ .env
+
+node_modules
+
+# Backend/Vacation Time.postman_collection.json
+
+# errors.log

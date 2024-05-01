@@ -1,0 +1,72 @@
+.List .pagination {
+  position: absolute;
+  bottom: 60px;
+  left: 50px;
+  transform: translateX(-50%);
+  z-index: 3;
+  padding: 5px 1px;
+  background: rgba(203, 255, 224, 0.364);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3px);
+
+  border-radius: 10px;
+  transition: all 0.2s;
+}
+
+.List .pagination button {
+  margin: 0 5px;
+  background: rgba(203, 255, 224, 0.364);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3px);
+  border: 0px solid;
+  border-radius: 10px;
+  transition: all 0.2s;
+}
+
+.List .checkboxes {
+  display: flex;
+  position: absolute;
+  left: -1px;
+  border: 1px solid;
+  padding: 0 15px 0 25px;
+  margin-top: 80px;
+
+  background: rgba(203, 255, 224, 0.364);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3px);
+  border: 1px solid rgba(164, 255, 222, 0.62);
+  border-radius: 0 20px 20px 0;
+  transform: translateZ(0);
+  transition: all 0.2s;
+}
+
+.List .none-found {
+  margin-top: 30px;
+  text-shadow: 4px 4px 10px rgb(176, 253, 220), 4px 4px 20px rgb(34, 66, 52);
+}
+.List .tablet-checkboxes-label {
+  border: 1px solid;
+  padding: 0 15px 0 5px;
+  background: rgba(203, 255, 224, 0.364);
+  margin: 10px 10px 0 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3px);
+  border: 1px solid rgba(164, 255, 222, 0.62);
+  border-radius: 20px;
+  transform: translateZ(0);
+  transition: all 0.2s;
+}
+
+@media screen and (max-width: 1204px) {
+  .List .checkboxes {
+    display: none;
+  }
+  .List .tablet-checkboxes-label {
+    margin: 4px 4px 0 4px;
+  }
+}
+@media screen and (min-width: 1204px) {
+  .List .tablet-checkboxes {
+    display: none;
+  }
+}
